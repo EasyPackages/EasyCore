@@ -67,7 +67,7 @@ struct ThrottlerTests {
             try await Task.sleep(nanoseconds: 50_000_000) // 0.05s
         }
 
-        try await Task.sleep(nanoseconds: 600_000_000) // wait after burst
+        try await Task.sleep(nanoseconds: 6_000_000_000) // wait after burst
         #expect(await tracker.value() == 1)
     }
 }

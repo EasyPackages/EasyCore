@@ -31,10 +31,8 @@ struct MainThreadTests {
             DispatchQueue.global().async {
                 MainThread.asyncSafe {
                     guard Thread.isMainThread else { return }
-                    Task { await flag.setTrue() }
-
-                    // resume needs to run on main thread to avoid thread race
-                    DispatchQueue.main.async {
+                    Task { @MainActor in
+                        await flag.setTrue()
                         continuation.resume()
                     }
                 }
