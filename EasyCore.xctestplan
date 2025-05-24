@@ -1,0 +1,33 @@
+{
+  "configurations" : [
+    {
+      "id" : "CF935032-BC1F-44BE-B770-A175A1872A51",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:",
+          "identifier" : "EasyCore",
+          "name" : "EasyCore"
+        }
+      ]
+    },
+    "testExecutionOrdering" : "random"
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "EasyCoreTests",
+        "name" : "EasyCoreTests"
+      }
+    }
+  ],
+  "version" : 1
+}
